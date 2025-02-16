@@ -1,0 +1,101 @@
+.main__cont--cart {
+  &_container {
+    padding: 2rem 2rem 4rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 1rem;
+    & h3 {
+      color: var(--red);
+      font-size: 2.4rem;
+      font-family: "RedHatBold";
+    }
+    &-img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;  
+      gap: 2rem;
+      & p {
+        font-size: 1.6rem;
+        color: var(--rose-500);
+        font-family: "RedHatSemiBold";
+      }
+      .btn-order {
+        width: 100%;
+        background-color: var(--red);
+        color: var(--white);
+      }
+      .carbon__message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .7rem;
+        background-color: var(--rose-50);
+        width: 100%;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        & p {
+          font-size: 1.4rem;
+          font-family: "RedHatText";
+          & span {
+            font-family: "RedHatBold";;
+          }
+        }
+      }
+      .item__list {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        &--detail {
+          display: grid;
+          grid-template-columns: .8fr .2fr;
+          border-bottom: 1px solid var(--rose-100);
+          padding-bottom: 1rem;
+          .item__info {
+            &--name {
+              & p {
+                font-size: 1.6rem;
+                color: var(--rose-900);
+              }
+            }
+            &--price {
+              display: flex;
+              gap: 2rem;
+            }
+          }
+          .item__delete {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            & img {
+              width: 1.6rem;
+              border-radius: 50%;
+              border: 1px solid var(--rose-500);
+              width: 2.4rem;
+              padding: 0.3rem;
+            }
+          }
+        }
+      }
+      .order__total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        &--price {
+          color: var(--black) !important;
+          font-size: 2.6rem !important;
+          & p {
+            font-family: "RedHatBold";
+          }
+        }
+      }
+    }
+  }
+}
+
+

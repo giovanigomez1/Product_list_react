@@ -1,0 +1,72 @@
+.item {
+  width: 100%;
+  
+  // border: 1px solid bisque;
+  
+  &__img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    & img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+    &--add {
+      position: absolute;
+      bottom: -2rem;
+      & button {
+        & img {
+          width: 2rem;
+        }
+      }
+      .btn-cart {
+        display: flex;
+        transition: all .2s ease-in;
+      }
+      .btn-cart:hover {
+        border: 1px solid var(--red);
+        color: var(--red);
+      }
+      .btn-add {
+        width: 13.6rem;
+        background-color: var(--red);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & img {
+          width: 1.7rem;
+          height: 1.7rem;
+          border: 1px solid var(--white);
+          padding: .3rem;
+        }
+        &_qty {
+          color: var(--white);
+        }
+      }
+    }    
+  }
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: .2rem;
+    &--cat {
+      color: var(--rose-300);
+      font-size: 1.4rem;
+    }
+    &--name {
+      color: var(--rose-900);
+      font-size: 1.6rem;
+      font-family: "RedHatSemiBold";
+    }
+    &--price {
+      color: var(--red);
+      font-size: 1.6rem;
+    }
+  }
+}
+

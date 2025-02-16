@@ -1,0 +1,97 @@
+.confirm__order {
+  &--header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    & h4 {
+      font-size: 3rem;
+      font-family: "RedHatBold";
+    }
+    & p {
+      color: var(--rose-300);
+    }
+  }
+  &--list {
+    margin-top: 2rem;
+    max-height: 50vh;
+    overflow: scroll;
+    background-color: var(--rose-100);
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.8rem 1.8rem 0;
+    list-style: none;
+    &_inf {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.059);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      .item__image {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        &--detail {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: .6rem;
+          color: var(--rose-500);
+          & p {
+            font-size: 1.4rem;
+          }
+          &-name {
+            font-family: "RedHatBold";
+          }
+          &_price {
+            display: flex;
+            gap: 1rem;
+            &-qty {
+              color: var(--red);
+              font-family: "RedHatBold";
+            }
+          }
+        }
+      }
+      & img {
+        width: 5.5rem;
+      }
+    }
+    .subtotal {
+      font-size: 1.4rem;
+      font-family: "RedHatBold";
+    }
+  }
+  &--list::-webkit-scrollbar {
+    display: none;
+  }
+  &--total {
+    padding: 1.8rem;
+    background-color: var(--rose-100);
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & p:first-child {
+      font-size: 1.3rem;
+    }
+    & p:nth-child(2) {
+      font-size: 2rem;
+      font-family: "RedHatBold";
+    }
+
+  }
+  &--btn {
+    background-color: var(--red);
+    color: var(--white);
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+
+
+}

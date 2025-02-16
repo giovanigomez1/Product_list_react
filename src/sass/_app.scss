@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+$bp-largest: 84.3em; // 1350px
+$bp-large:62.5em; // 1000px
+$bp-medium: 48em; // 768px
+$bp-small: 37.5em; // 600px
+
+
+
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  position: relative;
+  @media only screen and (max-width: $bp-small){
+    font-size: 75%;
+  }
+}
+
+
+@font-face {
+  font-family: "RedHatText";   /*Can be any text*/
+  src: local("AirbnbCerealLight"),
+    url("../assets/fonts/static/RedHatText-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RedHatSemiBold";
+  src: url("../assets/fonts/static/RedHatText-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "RedHatBold";
+  src: url("../assets/fonts/static/RedHatText-Bold.ttf");
+}
+
+
+
+body {
+  font-family: "RedHatText";
+  background-color: var(--rose-50);
+  
+  
+}
+
+
+:root {
+  --red: #C73B0F;
+  --rose-900: #260F08;
+  --rose-500: #87635A;
+  --rose-400: #AD8A85;
+  --rose-300: #CAAFA7;
+  --rose-100: #F5EEEC;
+  --rose-50: #FCF8F6;
+  --green: #1EA575;
+  --black: #000000;
+  --white: #FFFFFF;
+}
+
+
+
+
+
+.main__cont {
+  width: 90vw;
+  max-width: 121.6rem;
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  column-gap: 2rem;
+  @media only screen and (max-width: $bp-large){
+    padding: 0 3rem;
+  }
+  @media only screen and (max-width: $bp-medium){
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @media only screen and (max-width: $bp-small){
+    padding: 0;
+  }
+
+  & h1 {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    font-family: "RedHatSemiBold";
+  }
+  &--products {
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      @media only screen and (max-width: $bp-medium){
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-row-gap: 6rem;
+      }
+      @media only screen and (max-width: $bp-small){
+        grid-row-gap: 2rem;
+      }
+
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border: 1px solid var(--rose-400);
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
